@@ -1,0 +1,18 @@
+{
+  "name": "dime-dom",
+  "version": "1.0.0",
+  "description": "A very small Dom Manipulation library that uses Jquery syntax but is only comprised of the most use Jquery functions. Made to making manipulating the dom less verbose and less key strokes. I chose to base it of Jquery's syntax as many developers are already familar with it so it should be easy to just start using.",
+  "main": "index.js",
+  "author": "Sean McQuaid",
+  "license": "MIT",
+  "private": false,
+  "devDependencies": {
+    "gulp": "^4.0.2",
+    "gulp-rename": "^2.0.0",
+    "gulp-size": "^4.0.1",
+    "gulp-terser": "^2.1.0"
+  },
+  "scripts": {
+    "build": "gulp build"
+  }
+}
