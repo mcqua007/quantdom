@@ -1,23 +1,26 @@
-const { task, src, dest, series, parallel, watch } = require('gulp');
+const {
+    task,
+    src,
+    dest,
+    series,
+    parallel,
+    watch
+} = require('gulp');
 const terser = require('gulp-terser');
 const rename = require('gulp-rename');
 const size = require('gulp-size');
 
-//js channel
+// js channel
 function jsBuildChannel(srcPath) {
-  src(srcPath)
-    .pipe(terser({
-      mangle: {
-        toplevel: true,
-        properties: true
-      }
-   }))
-    .pipe(rename('dime-dom.min.js'))
-    .pipe(size({ showFiles: true }))
-    .pipe(dest('dist'))
+    src(srcPath).pipe(terser({
+        mangle: {
+            toplevel: true,
+            properties: true
+        }
+    })).pipe(rename('quantdom.min.js')).pipe(size({showFiles: true})).pipe(dest('dist'))
 }
 
-//build js task
+// build js task
 task('build', async () => {
-  jsBuildChannel('src/*.js');
+    jsBuildChannel('src/*.js');
 });
