@@ -279,9 +279,6 @@ Quantdom.prototype.css = function (prop, value) {
  * @param {String | HTMLElement} selector an DOM element to manipulate
  * @returns {Quantdom}
  */
-function $(selector) {
+export default function (selector) {
     return new Quantdom(selector);
 }
-export {
-    $
-};
