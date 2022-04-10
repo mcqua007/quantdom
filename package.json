@@ -8,19 +8,19 @@
     "type": "git",
     "url": "https://github.com/mcqua007/quantdom.git"
   },
-  "keywords": [
+    "keywords": [
     "js",
     "javascript",
     "dom",
     "library",
     "mini jquery",
-    "dom manipulation",
-    "dom utilities"
+    "manipulation",
+    "utilities",
     "utils",
     "nano dom",
     "utilities",
-    "query selector",
     "query",
+    "selector",
     "jquery"
   ],
   "files": [
