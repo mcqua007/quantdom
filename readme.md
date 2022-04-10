@@ -1,10 +1,10 @@
 [comment]: <> (Badges from https://shields.io/ and https://badgen.net/)
 ## Quantdom JS
-QuantDOM is a very small dom danipulation library that uses Jquery like syntax but is only comprised of the most use Jquery functions. Made to making manipulating the dom less verbose and less key strokes. I chose to base it of Jquery's syntax as many developers are already familar with it so it should be easy to just start using.
+QuantDOM is a very small (about 600 bytes when ran through [terser](https://www.npmjs.com/package/terser)) dom danipulation library that uses Jquery like syntax but is only comprised of the most use Jquery functions. Made to making manipulating the dom less verbose and less key strokes. I chose to base it of Jquery's syntax as many developers are already familar with it so it should be easy to just start using.
 
 ![npm bundle size](https://img.shields.io/bundlephobia/min/quantdom?color=%234338ca&logoColor=%232a2b2c) ![npm bundle size](https://img.shields.io/bundlephobia/minzip/quantdom?color=%234338ca&label=gzipped%20size&logoColor=%232a2b2c) ![NPM](https://img.shields.io/npm/l/quantdom?color=%234338ca&logoColor=%232a2b2c)
 
-**<font size="1">Note: If you use terser in your bundler you can decrease script size to **1.9KB** minified and **578B** gzipped. More about Quantdom at [Bundlephobia](https://bundlephobia.com/package/quantdom).</font>*
+*<font size="1"> - More about Quantdom at [Bundlephobia](https://bundlephobia.com/package/quantdom).</font>*
 
 ## Getting Started
 
@@ -14,7 +14,7 @@ QuantDOM is a very small dom danipulation library that uses Jquery like syntax b
 
 ### Install via CDN
 
-1. Use latest version [https://cdn.jsdelivr.net/npm/quantdom/dist/quantdom.min.js](https://cdn.jsdelivr.net/npm/quantdom/dist/quantdom.min.js) or specify a certain version [https://cdn.jsdelivr.net/npm/quantdom@1.0.9/dist/quantdom.min.js](https://cdn.jsdelivr.net/npm/quantdom@1.0.9/dist/quantdom.min.js)
+1. Use latest version [https://cdn.jsdelivr.net/npm/quantdom/dist/quantdom.min.js](https://cdn.jsdelivr.net/npm/quantdom/dist/quantdom.min.js) or specify a certain version [https://cdn.jsdelivr.net/npm/quantdom@1.1.0/dist/quantdom.min.js](https://cdn.jsdelivr.net/npm/quantdom@1.1.0/dist/quantdom.min.js)
 
     ```
     <script type="module" src="https://cdn.jsdelivr.net/npm/quantdom/dist/quantdom.min.js"></script>
