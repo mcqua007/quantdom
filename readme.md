@@ -13,9 +13,10 @@ Only ***2.05 KB*** minified and ***588 bytes*** gzipped.
 ### Install via CDN
 
 1. Use latest version [https://cdn.jsdelivr.net/npm/quantdom](https://cdn.jsdelivr.net/npm/quantdom) or specify a certain version [https://cdn.jsdelivr.net/npm/quantdom@1.0.4](https://cdn.jsdelivr.net/npm/quantdom@1.0.4)
-```
-<script type="module" src="https://cdn.jsdelivr.net/npm/quantdom"></script>
-```
+
+    ```
+    <script type="module" src="https://cdn.jsdelivr.net/npm/quantdom"></script>
+    ```
 
 2. Then import into project using `import q from 'quantdom'` or use the jQuery popularized $ as your function name. i.e. `import $ from 'quantdom'`
 
