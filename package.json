@@ -1,9 +1,15 @@
 {
   "name": "quantdom",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "QuantDOM is a very small dom danipulation library that uses Jquery like syntax but is only comprised of the most use Jquery functions. Made to making manipulating the dom less verbose and less key strokes. I chose to base it of Jquery's syntax as many developers are already familar with it so it should be easy to just start using.",
   "main": "src/index.js",
   "author": "Sean McQuaid",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mcqua007/quantdom"
+  },
+  "homepage": "https://github.com/mcqua007/quantdom",
+  "url": "https://github.com/mcqua007/quantdom/issues",
   "license": "MIT",
   "private": false,
   "devDependencies": {
