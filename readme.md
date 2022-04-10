@@ -1,7 +1,10 @@
 <a name="module_Quantdom"></a>
 
 ## Quantdom
-allows for maninuplating the dom, like a micro version of jquery
+QuantDOM is a very small dom danipulation library that uses Jquery like syntax but is only comprised of the most use Jquery functions. Made to making manipulating the dom less verbose and less key strokes. I chose to base it of Jquery's syntax as many developers are already familar with it so it should be easy to just start using.
+
+**Size**
+Only ***2.05 KB*** and ***588 bytes*** gzipped.
 
 
 * [Quantdom](#module_Quantdom)
