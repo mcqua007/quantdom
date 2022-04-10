@@ -8,13 +8,12 @@
 class Quantdom {
     constructor(selector) {
         this.selector = selector;
-
         if (typeof selector === 'string') {
-            this.els = document.querySelectorAll(this.selector);
+            this.els = document.querySelectorAll(selector);
         } else if (NodeList.prototype.isPrototypeOf(selector)) {
-            this.els = this.selector; // allow passing in nodelist
+            this.els = selector; // allow passing in nodelist
         } else {
-            this.els = [this.selector]; // handles the context/this case
+            this.els = [selector]; // handles the context/this case
         }
     }
 }
