@@ -1,7 +1,9 @@
+[comment]: <> (Badges from https://shields.io/ and https://badgen.net/)
 ## Quantdom JS
 QuantDOM is a very small dom danipulation library that uses Jquery like syntax but is only comprised of the most use Jquery functions. Made to making manipulating the dom less verbose and less key strokes. I chose to base it of Jquery's syntax as many developers are already familar with it so it should be easy to just start using.
 
 ![npm bundle size](https://img.shields.io/bundlephobia/min/quantdom?color=%234338ca&logoColor=%232a2b2c) ![npm bundle size](https://img.shields.io/bundlephobia/minzip/quantdom?color=%234338ca&label=gzipped%20size&logoColor=%232a2b2c) ![NPM](https://img.shields.io/npm/l/quantdom?color=%234338ca&logoColor=%232a2b2c)
+<font size="1">*- More about Quantdom at [Bundlephobia](https://bundlephobia.com/package/quantdom)*</font>
 
 **<font size="2">Note: If you use terser in your bundler you can decrease script size to **1.9KB** minified and **578B** gzipped.</font>*
 
