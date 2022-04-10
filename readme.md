@@ -6,7 +6,7 @@ Only ***2.05 KB*** minified and ***588 bytes*** gzipped.
 
 ## Getting Started
 
-### Install using NPM
+### Install via NPM
 1. Install using npm ` npm i quantdom` or with yarn `yarn add quantdom`
 2. Then import into project `import q from 'quantdom'`
    Another popular import name is $ i.e. `import $ from 'quantdom'`
