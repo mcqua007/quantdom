@@ -30,6 +30,8 @@
     "jquery"
   ],
   "files": [
+    "readme.md",
+    "LICENSE",
     "src",
     "dist"
   ],
