@@ -265,6 +265,16 @@ Quantdom.prototype.removeClass = function (className) {
 };
 
 /**
+ * @description toggle a class on selected element(s)
+ * @param {string} className
+ */
+ Quantdom.prototype.toggleClass = function (className) {
+    this.each((el) => {
+        el.classList.toggle(className);
+    });
+};
+
+/**
  * @description set style or returns rulename
  * @param {string} prop css property to get or set
  * @param {*} [value] value to set styles
