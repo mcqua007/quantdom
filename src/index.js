@@ -1,21 +1,21 @@
 /**
  * @class Quantdom
- * @description QuantDOM is a very small dom danipulation library that uses Jquery 
- * like syntax but is only comprised of the most use Jquery functions. Made to making 
- * manipulating the dom less verbose and less key strokes. I chose to base it of Jquery's 
+ * @description QuantDOM is a very small dom danipulation library that uses Jquery
+ * like syntax but is only comprised of the most use Jquery functions. Made to making
+ * manipulating the dom less verbose and less key strokes. I chose to base it of Jquery's
  * syntax as many developers are already familar with it so it should be easy to just start using.
  */
 class Quantdom {
-    constructor(selector) {
-        this.selector = selector;
-        if (typeof selector === 'string') {
-            this.els = document.querySelectorAll(selector);
-        } else if (NodeList.prototype.isPrototypeOf(selector)) {
-            this.els = selector; // allow passing in nodelist
-        } else {
-            this.els = [selector]; // handles the context/this case
-        }
+  constructor(selector) {
+    this.selector = selector;
+    if (typeof selector === 'string') {
+      this.els = document.querySelectorAll(selector);
+    } else if (NodeList.prototype.isPrototypeOf(selector)) {
+      this.els = selector; // allow passing in nodelist
+    } else {
+      this.els = [selector]; // handles the context/this case
     }
+  }
 }
 
 // using prototype will be more efficient and
@@ -23,12 +23,12 @@ class Quantdom {
 // ===========================================================
 
 /**
- * @description Run a function on each iteration on the list of elements. 
+ * @description Run a function on each iteration on the list of elements.
  * Don't remove as other methods depend on this for iteration.
  * @param {function} handler A function to run on each iteration of the loop
  */
 Quantdom.prototype.each = function (handler) {
-    this.els.forEach(handler);
+  this.els.forEach(handler);
 };
 
 /**
@@ -37,7 +37,7 @@ Quantdom.prototype.each = function (handler) {
  * @returns {Quantdom} returns first element that matches the selector
  */
 Quantdom.prototype.find = function (selector) {
-    return new Quantdom(this.els[0].querySelector(selector));
+  return new Quantdom(this.els[0].querySelector(selector));
 };
 
 /**
@@ -46,7 +46,7 @@ Quantdom.prototype.find = function (selector) {
  * @returns {Quantdom} returns nodelist of that matches the selector
  */
 Quantdom.prototype.findAllEls = function (selector) {
-    return new Quantdom(this.els[0].querySelectorAll(selector));
+  return new Quantdom(this.els[0].querySelectorAll(selector));
 };
 
 /**
@@ -55,7 +55,7 @@ Quantdom.prototype.findAllEls = function (selector) {
  * @returns {HTMLElement} returns first element that matches the selector
  */
 Quantdom.prototype.findEl = function (selector) {
-    return this.els[0].querySelector(selector);
+  return this.els[0].querySelector(selector);
 };
 
 /**
@@ -64,7 +64,7 @@ Quantdom.prototype.findEl = function (selector) {
  * @returns {Nodelist} returns nodelist of that matches the selector
  */
 Quantdom.prototype.findAllEls = function (selector) {
-    return this.els[0].querySelectorAll(selector);
+  return this.els[0].querySelectorAll(selector);
 };
 
 /**
@@ -73,7 +73,7 @@ Quantdom.prototype.findAllEls = function (selector) {
  * @returns {HTMLElement} an element in the array of elements you want to use
  */
 Quantdom.prototype.el = function (index = 0) {
-    return Array.from(this.els).at(index);
+  return Array.from(this.els).at(index);
 };
 
 /**
@@ -81,7 +81,7 @@ Quantdom.prototype.el = function (index = 0) {
  * @returns {HTMLElement} last element in array of elements you want to use
  */
 Quantdom.prototype.lastEl = function () {
-    return this.els[this.els.length - 1];
+  return this.els[this.els.length - 1];
 };
 
 /**
@@ -89,7 +89,7 @@ Quantdom.prototype.lastEl = function () {
  * @returns {Nodelist} an a nodelists
  */
 Quantdom.prototype.els = function () {
-    return this.els;
+  return this.els;
 };
 
 /**
@@ -98,9 +98,9 @@ Quantdom.prototype.els = function () {
  * @param {function} listener event listener function to execute on event
  */
 Quantdom.prototype.on = function (event, listener) {
-    this.each((el) => {
-        el.addEventListener(event, listener);
-    });
+  this.each((el) => {
+    el.addEventListener(event, listener);
+  });
 };
 
 /**
@@ -109,9 +109,9 @@ Quantdom.prototype.on = function (event, listener) {
  * @param {function} listener event listener function to remove
  */
 Quantdom.prototype.off = function (event, listener) {
-    this.each((el) => {
-        el.removeEventListener(event, listener);
-    });
+  this.each((el) => {
+    el.removeEventListener(event, listener);
+  });
 };
 
 /**
@@ -119,9 +119,9 @@ Quantdom.prototype.off = function (event, listener) {
  * @param  {string} html html string to append to dom
  */
 Quantdom.prototype.append = function (html) {
-    this.each((el) => {
-        el.insertAdjacentHTML('beforeend', html);
-    });
+  this.each((el) => {
+    el.insertAdjacentHTML('beforeend', html);
+  });
 };
 
 /**
@@ -129,9 +129,9 @@ Quantdom.prototype.append = function (html) {
  * @param {string} html string of html to prepend
  */
 Quantdom.prototype.prepend = function (html) {
-    this.each((el) => {
-        el.insertAdjacentHTML('afterbegin', html);
-    });
+  this.each((el) => {
+    el.insertAdjacentHTML('afterbegin', html);
+  });
 };
 
 /**
@@ -139,9 +139,9 @@ Quantdom.prototype.prepend = function (html) {
  * @param {string} html string of html to prepend
  */
 Quantdom.prototype.before = function (html) {
-    this.each((el) => {
-        el.insertAdjacentHTML('beforebegin', html);
-    });
+  this.each((el) => {
+    el.insertAdjacentHTML('beforebegin', html);
+  });
 };
 
 /**
@@ -149,9 +149,9 @@ Quantdom.prototype.before = function (html) {
  * @param {string} html string of html to prepend
  */
 Quantdom.prototype.after = function (html) {
-    this.each((el) => {
-        el.insertAdjacentHTML('afterend', html);
-    });
+  this.each((el) => {
+    el.insertAdjacentHTML('afterend', html);
+  });
 };
 
 /**
@@ -161,13 +161,13 @@ Quantdom.prototype.after = function (html) {
  * @return {string} value of first occurence of element attribute
  */
 Quantdom.prototype.attr = function (attr, value) {
-    if (value !== undefined) {
-        this.each((el) => {
-            el.setAttribute(attr, value);
-        });
-    } else {
-        return this.els[0].getAttribute(attr);
-    }
+  if (value !== undefined) {
+    this.each((el) => {
+      el.setAttribute(attr, value);
+    });
+  } else {
+    return this.els[0].getAttribute(attr);
+  }
 };
 
 /**
@@ -175,14 +175,14 @@ Quantdom.prototype.attr = function (attr, value) {
  * @param {boolean} [aria] if true sets ara-hidden to true instead of setting inline display style to none
  */
 Quantdom.prototype.hide = function (ariaOnly) {
-    this.each((el) => {
-        if (ariaOnly) {
-            el.setAttribute('aria-hidden', 'true');
-        } else {
-            el.style.display = 'none';
-            el.setAttribute('aria-hidden', 'true');
-        }
-    });
+  this.each((el) => {
+    if (ariaOnly) {
+      el.setAttribute('aria-hidden', 'true');
+    } else {
+      el.style.display = 'none';
+      el.setAttribute('aria-hidden', 'true');
+    }
+  });
 };
 
 /**
@@ -190,14 +190,14 @@ Quantdom.prototype.hide = function (ariaOnly) {
  * @param {boolean} [aria] if true sets ara-hidden to false instead of removing inline display style
  */
 Quantdom.prototype.show = function (ariaOnly) {
-    this.each((el) => {
-        if (ariaOnly) {
-            el.setAttribute('aria-hidden', 'false');
-        } else {
-            el.style.display = '';
-            el.setAttribute('aria-hidden', 'false');
-        }
-    });
+  this.each((el) => {
+    if (ariaOnly) {
+      el.setAttribute('aria-hidden', 'false');
+    } else {
+      el.style.display = '';
+      el.setAttribute('aria-hidden', 'false');
+    }
+  });
 };
 
 /**
@@ -206,13 +206,13 @@ Quantdom.prototype.show = function (ariaOnly) {
  * @returns {string} html of first occurence of element
  */
 Quantdom.prototype.html = function (html) {
-    if (html !== undefined) {
-        this.each((el) => {
-            el.innerHTML = html;
-        });
-    } else {
-        return this.els[0].innerHTML;
-    }
+  if (html !== undefined) {
+    this.each((el) => {
+      el.innerHTML = html;
+    });
+  } else {
+    return this.els[0].innerHTML;
+  }
 };
 /**
  * @description inserts text/replaces text or returns text of an element
@@ -220,13 +220,13 @@ Quantdom.prototype.html = function (html) {
  * @returns {string} text of first occurence of element
  */
 Quantdom.prototype.text = function (newValue) {
-    if (newValue !== undefined) {
-        this.each((el) => {
-            el.textContent = newValue;
-        });
-    } else {
-        return this.els[0].textContent;
-    }
+  if (newValue !== undefined) {
+    this.each((el) => {
+      el.textContent = newValue;
+    });
+  } else {
+    return this.els[0].textContent;
+  }
 };
 
 /**
@@ -235,13 +235,13 @@ Quantdom.prototype.text = function (newValue) {
  * @returns {*} value of first occurence of element
  */
 Quantdom.prototype.val = function (newValue) {
-    if (newValue === undefined) {
-        return this.els[0].value;
-    } else {
-        this.each((el) => {
-            el.value = newValue;
-        });
-    }
+  if (newValue === undefined) {
+    return this.els[0].value;
+  } else {
+    this.each((el) => {
+      el.value = newValue;
+    });
+  }
 };
 
 /**
@@ -249,9 +249,9 @@ Quantdom.prototype.val = function (newValue) {
  * @param {string} className
  */
 Quantdom.prototype.addClass = function (className) {
-    this.each((el) => {
-        el.classList.add(className);
-    });
+  this.each((el) => {
+    el.classList.add(className);
+  });
 };
 
 /**
@@ -259,9 +259,9 @@ Quantdom.prototype.addClass = function (className) {
  * @param {string} className
  */
 Quantdom.prototype.removeClass = function (className) {
-    this.each((el) => {
-        el.classList.remove(className);
-    });
+  this.each((el) => {
+    el.classList.remove(className);
+  });
 };
 
 /**
@@ -281,13 +281,13 @@ Quantdom.prototype.removeClass = function (className) {
  * @returns computed style of element
  */
 Quantdom.prototype.css = function (prop, value) {
-    if (prop && value) {
-        this.each((el) => {
-            el.style[prop] = value;
-        });
-    } else {
-        return getComputedStyle(this.els[0])[prop];
-    }
+  if (prop && value) {
+    this.each((el) => {
+      el.style[prop] = value;
+    });
+  } else {
+    return getComputedStyle(this.els[0])[prop];
+  }
 };
 
 /**
@@ -296,5 +296,5 @@ Quantdom.prototype.css = function (prop, value) {
  * @returns {Quantdom}
  */
 export default function (selector) {
-    return new Quantdom(selector);
+  return new Quantdom(selector);
 }
