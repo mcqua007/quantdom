@@ -11,7 +11,7 @@
   },
   "scripts": {
     "build": "rollup -c",
-    "docs": "node_modules/.bin/jsdoc2md src/index.js",
+    "docs": "node ./node_modules/.bin/jsdoc2md src/index.js",
     "bump": "rollup -c && npm version patch --no-git-tag-version"
   },
   "keywords": [
