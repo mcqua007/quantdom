@@ -43,6 +43,7 @@
   },
   "scripts": {
     "build": "gulp build",
-    "docs": "node_modules/.bin/jsdoc2md src/index.js"
+    "docs": "node_modules/.bin/jsdoc2md src/index.js",
+    "publish": "gulp build && npm publish"
   }
 }
