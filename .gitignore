@@ -3,3 +3,4 @@ node_modules
 temp
 TODOs.md
 yarn-error.log
+package-lock.json
