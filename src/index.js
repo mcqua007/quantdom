@@ -275,6 +275,15 @@ Quantdom.prototype.toggleClass = function (className) {
 };
 
 /**
+ * @description returns true if selected element(s) has class
+ * @param {string} className
+ * @returns {boolean} true if selected element(s) has class
+ */
+Quantdom.prototype.hasClass = function (className) {
+  return this.els[0].classList.contains(className);
+};
+
+/**
  * @description set style or returns rulename
  * @param {string} prop css property to get or set
  * @param {*} [value] value to set styles
