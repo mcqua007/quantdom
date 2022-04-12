@@ -10,9 +10,9 @@
     "url": "https://github.com/mcqua007/quantdom.git"
   },
   "scripts": {
-    "build": "rollup -c",
-    "docs": "node ./node_modules/.bin/jsdoc2md src/index.js",
-    "bump": "rollup -c && npm version patch --no-git-tag-version"
+    "build": "npx rollup -c",
+    "docs": "npx jsdoc2md src/index.js",
+    "bump": "npx rollup -c && npm version patch --no-git-tag-version"
   },
   "keywords": [
     "js",
