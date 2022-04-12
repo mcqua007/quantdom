@@ -10,7 +10,7 @@ Made for working with the dom less verbose without all the bloat from jQuery. I 
 ***Why the name, QuantDOM ?*** 
 Taken from [Wikipedia's *Quantum* article](https://en.wikipedia.org/wiki/Quantum), *"In physics, a quantum (plural quanta) is the minimum amount of any physical entity (physical property) involved in an interaction."* This fit the goal of this project in the way Quantdom is made to reduce the effort when having to deal directly with the DOM.
 
-**Optional Chaining:** `$('.modal').show().addClass('active').text('Modal is open!');`
+**Optional Chaining:** `$('.modal').show().addClass('active-overlay');`
 
 ## Getting Started
 
@@ -20,7 +20,7 @@ Taken from [Wikipedia's *Quantum* article](https://en.wikipedia.org/wiki/Quantum
 
 ### Install via CDN
 
-1. Use latest version [https://cdn.jsdelivr.net/npm/quantdom](https://cdn.jsdelivr.net/npm/quantdom/dist/quantdom.min.js) or specify a certain version [https://cdn.jsdelivr.net/npm/quantdom@1.1.14/dist/quantdom.min.js](https://cdn.jsdelivr.net/npm/quantdom@1.1.14/dist/quantdom.min.js)
+1. Use latest version [https://cdn.jsdelivr.net/npm/quantdom](https://cdn.jsdelivr.net/npm/quantdom/dist/quantdom.min.js) or specify a certain version [https://cdn.jsdelivr.net/npm/quantdom@1.1.15/dist/quantdom.min.js](https://cdn.jsdelivr.net/npm/quantdom@1.1.15/dist/quantdom.min.js)
 
     ```
     <script src="https://cdn.jsdelivr.net/npm/quantdom"></script>
