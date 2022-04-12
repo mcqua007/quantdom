@@ -13,7 +13,9 @@
     "build": "npx rollup -c && npx jest",
     "docs": "npx jsdoc2md ./src/index.js > docs.md",
     "bump": "npx rollup -c && npm version patch --no-git-tag-version",
-    "test": "npx jest"
+    "test": "npx jest",
+    "format": "npx prettier --write src/index.js",
+    "format:check": "npx prettier -c src/index.js"
   },
   "keywords": [
     "js",
@@ -49,6 +51,7 @@
     "@babel/preset-react": "^7.16.7",
     "jest": "^27.5.1",
     "jsdoc-to-markdown": "^7.1.1",
+    "prettier": "^2.6.2",
     "rollup": "^2.70.1",
     "rollup-plugin-filesize": "^9.1.2",
     "rollup-plugin-terser": "^7.0.2"
