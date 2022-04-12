@@ -1,4 +1,5 @@
 [comment]: <> (Badges from https://shields.io/ and https://badgen.net/)
+[comment]: <> (JsBin Original Template - https://jsbin.com/noyihemuni/edit?html,output)
 ## Quantdom JS
 ![npm bundle size](https://img.shields.io/bundlephobia/min/quantdom?color=%234338ca&logoColor=%232a2b2c) ![npm bundle size](https://img.shields.io/bundlephobia/minzip/quantdom?color=%234338ca&label=gzipped%20size&logoColor=%232a2b2c) ![NPM](https://img.shields.io/npm/l/quantdom?color=%234338ca&logoColor=%232a2b2c)
 
@@ -25,5 +26,8 @@ Taken from [Wikipedia's *Quantum* article](https://en.wikipedia.org/wiki/Quantum
 
 2. Then start using with $() ex. `$('.drop-down').attr('aria-expanded', 'true')`
 
+### Try it Out!
+- Fork the below playground by clicking th New Bin button and start editing!
+- [Go to JSBin Playground](https://jsbin.com/noyihemuni/6/edit?html,output)
 ### Documentation
 *View generated [documentation](docs.md)*
