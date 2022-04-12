@@ -14,7 +14,7 @@ Please, go through these steps before you submit a PR.
 
 3. **After** these steps, you're ready to open a pull request.
 
-    a. Your pull request MUST NOT target the `master` branch on this repository. You probably want to target `staging` instead.
+    a. Your pull request should target the `master` branch on this repository.
 
     b. Give a descriptive title to your PR.
 
