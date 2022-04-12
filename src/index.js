@@ -165,9 +165,8 @@ Quantdom.prototype.attr = function (attr, value) {
     return this.each(el => {
       el.setAttribute(attr, value)
     })
-  } else {
-    return this.els[0].getAttribute(attr)
   }
+  return this.els[0].getAttribute(attr)
 }
 
 /**
@@ -210,9 +209,8 @@ Quantdom.prototype.html = function (html) {
     return this.each(el => {
       el.innerHTML = html
     })
-  } else {
-    return this.els[0].innerHTML
   }
+  return this.els[0].innerHTML
 }
 
 /**
@@ -225,9 +223,8 @@ Quantdom.prototype.text = function (newValue) {
     return this.each(el => {
       el.textContent = newValue
     })
-  } else {
-    return this.els[0].textContent
   }
+  return this.els[0].textContent
 }
 
 /**
@@ -238,11 +235,10 @@ Quantdom.prototype.text = function (newValue) {
 Quantdom.prototype.val = function (newValue) {
   if (newValue === undefined) {
     return this.els[0].value
-  } else {
-    return this.each(el => {
-      el.value = newValue
-    })
   }
+  return this.each(el => {
+    el.value = newValue
+  })
 }
 
 /**
@@ -286,9 +282,8 @@ Quantdom.prototype.css = function (prop, value) {
     return this.each(el => {
       el.style[prop] = value
     })
-  } else {
-    return getComputedStyle(this.els[0])[prop]
   }
+  return getComputedStyle(this.els[0])[prop]
 }
 
 /**
