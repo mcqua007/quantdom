@@ -218,6 +218,14 @@ describe('check index.js', () => {
 
       expect($('#username').attr('class')).toBe('test-class');
     });
+
+    test('has', () => {
+      document.body.innerHTML =
+        '<div id="container">' + '   <span id="username" class="test-class">abc</span>' + '</div>';
+
+      expect($('#username').hasClass('test-class')).toBe(true);
+      expect($('#username').hasClass('test-class-2')).toBe(false);
+    })
   });
 
   test('css', () => {
