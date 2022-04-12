@@ -11,7 +11,7 @@
   },
   "scripts": {
     "build": "npx rollup -c",
-    "docs": "npx jsdoc2md src/index.js",
+    "docs": "npx jsdoc2md src/index.js > docs.md",
     "bump": "npx rollup -c && npm version patch --no-git-tag-version"
   },
   "keywords": [
