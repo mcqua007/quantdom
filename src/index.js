@@ -33,6 +33,14 @@ Quantdom.prototype.each = function (handler) {
 };
 
 /**
+ * @description returns Quantdom instance with parent of the first element that matches the selector
+ * @returns {Quantdom} returns parent of first element that matches the selector
+ */
+Quantdom.prototype.parent = function () {
+  return new Quantdom(this.els[0].parentNode);
+};
+
+/**
  * @description returns Quantdom instance with first element that matches the selector in children of the selected node
  * @param {string} [selector] query selector to search for
  * @returns {Quantdom} returns first element that matches the selector
