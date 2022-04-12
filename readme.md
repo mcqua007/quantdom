@@ -1,5 +1,5 @@
 [comment]: <> (Badges from https://shields.io/ and https://badgen.net/)
-[comment]: <> (JsBin Original Template - https://jsbin.com/noyihemuni/edit?html,output)
+[comment]: <> (JsBin Original Template - https://jsbin.com/yevusevahu/edit?html,output)
 ## Quantdom JS
 ![npm bundle size](https://img.shields.io/bundlephobia/min/quantdom?color=%234338ca&logoColor=%232a2b2c) ![npm bundle size](https://img.shields.io/bundlephobia/minzip/quantdom?color=%234338ca&label=gzipped%20size&logoColor=%232a2b2c) ![NPM](https://img.shields.io/npm/l/quantdom?color=%234338ca&logoColor=%232a2b2c)
 
@@ -20,16 +20,16 @@ Taken from [Wikipedia's *Quantum* article](https://en.wikipedia.org/wiki/Quantum
 
 ### Install via CDN
 
-1. Use latest version [https://cdn.jsdelivr.net/npm/quantdom/dist/quantdom.min.js](https://cdn.jsdelivr.net/npm/quantdom/dist/quantdom.min.js) or specify a certain version [https://cdn.jsdelivr.net/npm/quantdom@1.1.13/dist/quantdom.min.js](https://cdn.jsdelivr.net/npm/quantdom@1.1.13/dist/quantdom.min.js)
+1. Use latest version [https://cdn.jsdelivr.net/npm/quantdom](https://cdn.jsdelivr.net/npm/quantdom/dist/quantdom.min.js) or specify a certain version [https://cdn.jsdelivr.net/npm/quantdom@1.1.14/dist/quantdom.min.js](https://cdn.jsdelivr.net/npm/quantdom@1.1.14/dist/quantdom.min.js)
 
     ```
-    <script src="https://cdn.jsdelivr.net/npm/quantdom@1.1.13/dist/quantdom.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/quantdom"></script>
     ```
 
 2. Then start using with $() ex. `$('.drop-down').attr('aria-expanded', 'true')`
 
 ### Try it Out!
 - Fork the below playground by clicking th New Bin button and start editing!
-- [Go to JSBin Playground](https://jsbin.com/noyihemuni/6/edit?html,output)
+- [Go to JSBin Playground](https://jsbin.com/yevusevahu/edit?html,output)
 ### Documentation
 *View generated [documentation](docs.md)*
