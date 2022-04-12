@@ -111,13 +111,37 @@ describe('check index.js', () => {
     expect($('#container').html()).toBe('   <span>test</span><span id="username">abc</span><span>test</span>');
   });
 
-  test('attr', () => {
-    document.body.innerHTML =
-      '<div id="container">' + '   <span id="username" class="test-class">abc</span>' + '</div>';
+  describe('Attribute', () => {
+    test('Get', () => {
+      document.body.innerHTML =
+        '<div id="container">' + '   <span id="username" class="test-class">abc</span>' + '</div>';
+  
+      expect($('#username').attr('class')).toBe('test-class');
+      expect($('#username').attr('id')).toBe('username');
+    });
 
-    expect($('#username').attr('class')).toBe('test-class');
-    expect($('#username').attr('id')).toBe('username');
-  });
+    test('Set', () => {
+      document.body.innerHTML =
+        '<div id="container">' + '   <span id="username" class="test-class">abc</span>' + '</div>';
+  
+      $('#username').attr('class', 'test-class-2');
+      $('#username').attr('id', 'username-2');
+  
+      expect($('#username-2').attr('class')).toBe('test-class-2');
+      expect($('#username-2').attr('id')).toBe('username-2');
+    })
+
+    test('Remove', () => {
+      document.body.innerHTML =
+        '<div id="container">' + '   <span data-test="test-span" id="username" class="test-class">abc</span>' + '</div>';
+  
+      $('#username').removeAttr('class');
+      $('#username').removeAttr('id');
+  
+      expect($('[data-test=test-span]').attr('class')).toBe(null);
+      expect($('[data-test=test-span]').attr('id')).toBe(null);
+    })
+  })
 
   describe('hide and show', () => {
     test('display', () => {
