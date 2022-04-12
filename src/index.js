@@ -171,6 +171,16 @@ Quantdom.prototype.attr = function (attr, value) {
 };
 
 /**
+ * @description removes an attribute from an element
+ * @param {string} attr an attribute to remove
+ */
+ Quantdom.prototype.removeAttr = function (attr) {
+	return this.each((element) => {
+		element.removeAttribute(attr);
+	});
+};
+
+/**
  * @description adds display none from css inline styles
  * @param {boolean} [aria] if true sets ara-hidden to true instead of setting inline display style to none
  */
