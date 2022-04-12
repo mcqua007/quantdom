@@ -4,9 +4,9 @@ Please, go through these steps before you submit a PR.
 1. Make sure that your PR is not a duplicate.
 2. If not, then make sure that:
 
-    a. You have done your changes in a separate branch. Branches MUST have descriptive names that start with either the `fix/` or `feature/` prefixes. Good examples are: `fix/signin-issue` or `feature/issue-templates`.
+    a. You have done your changes in a separate branch. Branches MUST have descriptive names that start with either the `username/feautre-[describe]` or `username/fix-[describe]. Good examples are: `bob22/fix-signin-issue` or `bob22/feature-issue-templates`.
 
-    b. You have a descriptive commit message with a short title (first line).
+    b. You have a descriptive commit message with a short title (first line). Commits should have format describe in contributing [docs](CONTRIBUTING.md).
 
     c. You have only one commit (if not, squash them into one commit).
 
@@ -22,6 +22,7 @@ Please, go through these steps before you submit a PR.
 
     d. Put `closes #XXXX` in your comment to auto-close the issue that your PR fixes (if such).
 
+** Refer to Commits contributing [docs](CONTRIBUTING.md) before requesting or adding a new feature. Also look at the checklist if wanting to add a new utility method.
 
 **PLEASE REMOVE TEMPLATE ABOVE BEFORE SUBMITTING**
 
