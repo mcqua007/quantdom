@@ -20,13 +20,13 @@ Taken from [Wikipedia's *Quantum* article](https://en.wikipedia.org/wiki/Quantum
 
 ### Install via CDN
 
-1. Use latest version [https://cdn.jsdelivr.net/npm/quantdom](https://cdn.jsdelivr.net/npm/quantdom/dist/quantdom.min.js) or specify a certain version [https://cdn.jsdelivr.net/npm/quantdom@1.1.15/dist/quantdom.min.js](https://cdn.jsdelivr.net/npm/quantdom@1.1.15/dist/quantdom.min.js)
+1. Use latest version [https://cdn.jsdelivr.net/npm/quantdom](https://cdn.jsdelivr.net/npm/quantdom/dist/quantdom.min.js) or specify a certain version [https://cdn.jsdelivr.net/npm/quantdom@1.2.1/dist/quantdom.min.js](https://cdn.jsdelivr.net/npm/quantdom@1.2.1/dist/quantdom.min.js)
 
     ```
     <script src="https://cdn.jsdelivr.net/npm/quantdom"></script>
     ```
 
-2. Then start using with $() ex. `$('.drop-down').attr('aria-expanded', 'true')`
+2. Then start using ex. `$('.drop-down').attr('aria-expanded', 'true')`
 
 ### Try it Out!
 - Fork the below playground by clicking th New Bin button and start editing!
