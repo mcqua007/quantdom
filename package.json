@@ -15,7 +15,9 @@
     "bump": "npx rollup -c && npm version patch --no-git-tag-version",
     "test": "npx jest",
     "format": "npx prettier --write src/index.js",
-    "format:check": "npx prettier -c src/index.js"
+    "format:check": "npx prettier -c src/index.js",
+    "lint": "npx eslint src/index.js",
+    "lint:fix": "npx eslint --fix src/index.js"
   },
   "keywords": [
     "js",
