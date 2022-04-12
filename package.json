@@ -13,7 +13,7 @@
     "lint:check": "eslint src/**/*.{js,}",
     "lint:fix": "eslint --fix src/**/*.{js,}",
     "prettier:fix": "prettier -w \"src/**/*.{js,}\"",
-    "prettier:check": "prettier -c \"src/**/*.{js,}\""
+    "prettier:check": "prettier -c \"src/**/*.{js,}\"",
     "build": "npx rollup -c",
     "docs": "npx jsdoc2md src/index.js > docs.md",
     "bump": "npx rollup -c && npm version patch --no-git-tag-version"
