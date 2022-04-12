@@ -10,7 +10,7 @@
     "url": "https://github.com/mcqua007/quantdom.git"
   },
   "scripts": {
-    "test": "jest"
+    "test": "jest",
     "build": "npx rollup -c",
     "docs": "npx jsdoc2md src/index.js > docs.md",
     "bump": "npx rollup -c && npm version patch --no-git-tag-version"
