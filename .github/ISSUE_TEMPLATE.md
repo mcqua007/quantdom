@@ -12,7 +12,7 @@
 
 #### Live Demo
 <!-- jsBin starting point (fork and edit), Fork by clicking New bin then reproducing your error -->
-https://jsbin.com/noyihemuni/6/edit?html,output
+https://jsbin.com/yevusevahu/edit?html,output
 <!-- ...or provide your own repro URL -->
 
 
