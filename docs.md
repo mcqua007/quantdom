@@ -6,10 +6,10 @@
 * [Quantdom](#Quantdom)
     * [new Quantdom()](#new_Quantdom_new)
     * [.each(handler)](#Quantdom+each)
+    * [.parent()](#Quantdom+parent) ⇒ [<code>Quantdom</code>](#Quantdom)
     * [.find([selector])](#Quantdom+find) ⇒ [<code>Quantdom</code>](#Quantdom)
-    * [.findAllEls([selector])](#Quantdom+findAllEls) ⇒ [<code>Quantdom</code>](#Quantdom)
     * [.findEl([selector])](#Quantdom+findEl) ⇒ <code>HTMLElement</code>
-    * [.findAllEls([selector])](#Quantdom+findAllEls) ⇒ <code>Nodelist</code>
+    * [.findEls([selector])](#Quantdom+findEls) ⇒ <code>Nodelist</code>
     * [.el([index])](#Quantdom+el) ⇒ <code>HTMLElement</code>
     * [.lastEl()](#Quantdom+lastEl) ⇒ <code>HTMLElement</code>
     * [.els()](#Quantdom+els) ⇒ <code>Nodelist</code>
@@ -27,20 +27,21 @@
     * [.val([newValue])](#Quantdom+val) ⇒ <code>\*</code>
     * [.addClass(className)](#Quantdom+addClass)
     * [.removeClass(className)](#Quantdom+removeClass)
+    * [.toggleClass(className)](#Quantdom+toggleClass)
     * [.css(prop, [value])](#Quantdom+css) ⇒
 
 <a name="new_Quantdom_new"></a>
 
 ### new Quantdom()
-QuantDOM is a very small dom danipulation library that uses Jquery 
-like syntax but is only comprised of the most use Jquery functions. Made to making 
-manipulating the dom less verbose and less key strokes. I chose to base it of Jquery's 
+QuantDOM is a very small dom danipulation library that uses Jquery
+like syntax but is only comprised of the most use Jquery functions. Made to making
+manipulating the dom less verbose and less key strokes. I chose to base it of Jquery's
 syntax as many developers are already familar with it so it should be easy to just start using.
 
 <a name="Quantdom+each"></a>
 
 ### quantdom.each(handler)
-Run a function on each iteration on the list of elements. 
+Run a function on each iteration on the list of elements.
 Don't remove as other methods depend on this for iteration.
 
 **Kind**: instance method of [<code>Quantdom</code>](#Quantdom)  
@@ -49,6 +50,13 @@ Don't remove as other methods depend on this for iteration.
 | --- | --- | --- |
 | handler | <code>function</code> | A function to run on each iteration of the loop |
 
+<a name="Quantdom+parent"></a>
+
+### quantdom.parent() ⇒ [<code>Quantdom</code>](#Quantdom)
+returns Quantdom instance with parent of the first element that matches the selector
+
+**Kind**: instance method of [<code>Quantdom</code>](#Quantdom)  
+**Returns**: [<code>Quantdom</code>](#Quantdom) - returns parent of first element that matches the selector  
 <a name="Quantdom+find"></a>
 
 ### quantdom.find([selector]) ⇒ [<code>Quantdom</code>](#Quantdom)
@@ -56,18 +64,6 @@ returns Quantdom instance with first element that matches the selector in childr
 
 **Kind**: instance method of [<code>Quantdom</code>](#Quantdom)  
 **Returns**: [<code>Quantdom</code>](#Quantdom) - returns first element that matches the selector  
-
-| Param | Type | Description |
-| --- | --- | --- |
-| [selector] | <code>string</code> | query selector to search for |
-
-<a name="Quantdom+findAllEls"></a>
-
-### quantdom.findAllEls([selector]) ⇒ [<code>Quantdom</code>](#Quantdom)
-returns Quantdom instance with elements that matches the selector in children of the selected node
-
-**Kind**: instance method of [<code>Quantdom</code>](#Quantdom)  
-**Returns**: [<code>Quantdom</code>](#Quantdom) - returns nodelist of that matches the selector  
 
 | Param | Type | Description |
 | --- | --- | --- |
@@ -85,9 +81,9 @@ returns first element that matches the selector in children of the selected node
 | --- | --- | --- |
 | [selector] | <code>string</code> | query selector to search for |
 
-<a name="Quantdom+findAllEls"></a>
+<a name="Quantdom+findEls"></a>
 
-### quantdom.findAllEls([selector]) ⇒ <code>Nodelist</code>
+### quantdom.findEls([selector]) ⇒ <code>Nodelist</code>
 returns elements that matches the selector in children of the selected node
 
 **Kind**: instance method of [<code>Quantdom</code>](#Quantdom)  
@@ -284,6 +280,17 @@ remove a class from selected element(s)
 | --- | --- |
 | className | <code>string</code> | 
 
+<a name="Quantdom+toggleClass"></a>
+
+### quantdom.toggleClass(className)
+toggle a class on selected element(s)
+
+**Kind**: instance method of [<code>Quantdom</code>](#Quantdom)  
+
+| Param | Type |
+| --- | --- |
+| className | <code>string</code> | 
+
 <a name="Quantdom+css"></a>
 
 ### quantdom.css(prop, [value]) ⇒
@@ -296,3 +303,4 @@ set style or returns rulename
 | --- | --- | --- |
 | prop | <code>string</code> | css property to get or set |
 | [value] | <code>\*</code> | value to set styles |
+
