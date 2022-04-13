@@ -33,3 +33,5 @@ Please, go through these steps before you submit a PR.
 #### How is this being tested ?
 
 #### Screenshots (if appropriate):
+
+[![Run Jest Test](https://github.com/mcqua007/quantdom/actions/workflows/jest-test.yml/badge.svg)](https://github.com/mcqua007/quantdom/actions/workflows/jest-test.yml)
