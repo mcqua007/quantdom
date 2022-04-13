@@ -4,6 +4,20 @@
 ![npm bundle size](https://img.shields.io/bundlephobia/min/quantdom?color=%234338ca&logoColor=%232a2b2c) ![npm bundle size](https://img.shields.io/bundlephobia/minzip/quantdom?color=%234338ca&label=gzipped%20size&logoColor=%232a2b2c) ![license type](https://img.shields.io/npm/l/quantdom?color=%234338ca&logoColor=%232a2b2c)
 ![test coverage](https://img.shields.io/badge/test%20coverage-100%25-4c51bf?style=flat&logoColor=%232a2b2c&color=%234338ca)
 
+----
+[![Run Jest Test](https://github.com/mcqua007/quantdom/actions/workflows/jest-test.yml/badge.svg?branch=master&event=status)](https://github.com/mcqua007/quantdom/actions/workflows/jest-test.yml)
+
+PR:
+[![Run Jest Test](https://github.com/mcqua007/quantdom/actions/workflows/jest-test.yml/badge.svg?branch=master&event=pull_request)](https://github.com/mcqua007/quantdom/actions/workflows/jest-test.yml)
+
+push
+[![Run Jest Test](https://github.com/mcqua007/quantdom/actions/workflows/jest-test.yml/badge.svg?branch=master&event=push)](https://github.com/mcqua007/quantdom/actions/workflows/jest-test.yml)
+
+check run:
+[![Run Jest Test](https://github.com/mcqua007/quantdom/actions/workflows/jest-test.yml/badge.svg?branch=master&event=check_run)](https://github.com/mcqua007/quantdom/actions/workflows/jest-test.yml)
+
+workflow_run
+[![Run Jest Test](https://github.com/mcqua007/quantdom/actions/workflows/jest-test.yml/badge.svg?branch=master&event=workflow_run)](https://github.com/mcqua007/quantdom/actions/workflows/jest-test.yml)
 Quantdom is a very small (about 600 bytes when ran through [terser](https://www.npmjs.com/package/terser) & gzipped) dom danipulation library that uuses a Jquery like syntax and supports chaining but is only comprised of the most commonly used Jquery functions.
 
 Made for working with the dom less verbose without all the bloat from jQuery. I chose to base it off of Jquery's syntax as many developers are already familar with it and it is very concise. This library is meant to be as small as possible (without being unreadble) so when you need to directly interact with the DOM you can use this library on top of a larger framework without extra bloat that you don't need.

@@ -33,3 +33,16 @@ Please, go through these steps before you submit a PR.
 #### How is this being tested ?
 
 #### Screenshots (if appropriate):
+[![Run Jest Test](https://github.com/mcqua007/quantdom/actions/workflows/jest-test.yml/badge.svg?branch=master&event=status)](https://github.com/mcqua007/quantdom/actions/workflows/jest-test.yml)
+
+PR:
+[![Run Jest Test](https://github.com/mcqua007/quantdom/actions/workflows/jest-test.yml/badge.svg?branch=master&event=pull_request)](https://github.com/mcqua007/quantdom/actions/workflows/jest-test.yml)
+
+push
+[![Run Jest Test](https://github.com/mcqua007/quantdom/actions/workflows/jest-test.yml/badge.svg?branch=master&event=push)](https://github.com/mcqua007/quantdom/actions/workflows/jest-test.yml)
+
+check run:
+[![Run Jest Test](https://github.com/mcqua007/quantdom/actions/workflows/jest-test.yml/badge.svg?branch=master&event=check_run)](https://github.com/mcqua007/quantdom/actions/workflows/jest-test.yml)
+
+workflow_run
+[![Run Jest Test](https://github.com/mcqua007/quantdom/actions/workflows/jest-test.yml/badge.svg?branch=master&event=workflow_run)](https://github.com/mcqua007/quantdom/actions/workflows/jest-test.yml)
