@@ -1,0 +1,18 @@
+name: Run Jest Test
+
+on: [push]
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+
+    - uses: c-hive/gha-yarn-cache@v2
+      # with:
+        # directory: server # Optional, speficy the folder of yarn.lock if not in the root directory
+
+    - name: Install JS dependencies
+      run: yarn install
+    - name: Test
+      run: yarn test
