@@ -1,7 +1,8 @@
 [comment]: <> (Badges from https://shields.io/ and https://badgen.net/)
 [comment]: <> (JsBin Original Template - https://jsbin.com/yevusevahu/edit?html,output)
 ## Quantdom JS
-![npm bundle size](https://img.shields.io/bundlephobia/min/quantdom?color=%234338ca&logoColor=%232a2b2c) ![npm bundle size](https://img.shields.io/bundlephobia/minzip/quantdom?color=%234338ca&label=gzipped%20size&logoColor=%232a2b2c) ![NPM](https://img.shields.io/npm/l/quantdom?color=%234338ca&logoColor=%232a2b2c)
+![npm bundle size](https://img.shields.io/bundlephobia/min/quantdom?color=%234338ca&logoColor=%232a2b2c) ![npm bundle size](https://img.shields.io/bundlephobia/minzip/quantdom?color=%234338ca&label=gzipped%20size&logoColor=%232a2b2c) ![license type](https://img.shields.io/npm/l/quantdom?color=%234338ca&logoColor=%232a2b2c)
+![test coverage](https://img.shields.io/badge/test%20coverage-100%25-4c51bf?style=flat&logoColor=%232a2b2c&color=%234338ca)
 
 Quantdom is a very small (about 600 bytes when ran through [terser](https://www.npmjs.com/package/terser) & gzipped) dom danipulation library that uuses a Jquery like syntax and supports chaining but is only comprised of the most commonly used Jquery functions.
 
