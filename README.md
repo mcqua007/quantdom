@@ -5,7 +5,7 @@
 ![test coverage](https://img.shields.io/badge/test%20coverage-100%25-4c51bf?style=flat&logoColor=%232a2b2c&color=%234338ca)
 
 Quantdom is a very small (about 600 bytes when ran through [terser](https://www.npmjs.com/package/terser) & gzipped) dom danipulation library that uuses a Jquery like syntax and supports chaining but is only comprised of the most commonly used Jquery functions.
-
+t
 Made for working with the dom less verbose without all the bloat from jQuery. I chose to base it off of Jquery's syntax as many developers are already familar with it and it is very concise. This library is meant to be as small as possible (without being unreadble) so when you need to directly interact with the DOM you can use this library on top of a larger framework without extra bloat that you don't need.
 
 ***Why the name, QuantDOM ?*** 
@@ -21,7 +21,7 @@ Taken from [Wikipedia's *Quantum* article](https://en.wikipedia.org/wiki/Quantum
 
 ### Install via CDN
 
-1. Use latest version [https://cdn.jsdelivr.net/npm/quantdom](https://cdn.jsdelivr.net/npm/quantdom/dist/quantdom.min.js) or specify a certain version [https://cdn.jsdelivr.net/npm/quantdom@1.2.1/dist/quantdom.min.js](https://cdn.jsdelivr.net/npm/quantdom@1.2.1/dist/quantdom.min.js)
+1. Use latest version [https://cdn.jsdelivr.net/npm/quantdom](https://cdn.jsdelivr.net/npm/quantdom/dist/quantdom.min.js) or specify a certain version [https://cdn.jsdelivr.net/npm/quantdom@1.2.2/dist/quantdom.min.js](https://cdn.jsdelivr.net/npm/quantdom@1.2.2/dist/quantdom.min.js). Visit [Quantdom's JSDelivr](https://www.jsdelivr.com/package/gh/mcqua007/quantdom?path=dist) page for esm versions.
 
     ```
     <script src="https://cdn.jsdelivr.net/npm/quantdom"></script>
