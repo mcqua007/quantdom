@@ -14,6 +14,7 @@
     "docs": "npx jsdoc2md ./src/index.js > docs.md",
     "bump": "npx rollup -c && npm version patch --no-git-tag-version",
     "test": "npx jest",
+    "test:coverage": "npx jest --config jestconfig.json",
     "format": "npx prettier --write src/index.js",
     "format:check": "npx prettier -c src/index.js",
     "lint": "npx eslint src/index.js",
