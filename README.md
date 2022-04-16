@@ -21,7 +21,7 @@ Taken from [Wikipedia's *Quantum* article](https://en.wikipedia.org/wiki/Quantum
 
 ### Install via CDN
 
-1. Use latest version [https://cdn.jsdelivr.net/npm/quantdom](https://cdn.jsdelivr.net/npm/quantdom/dist/quantdom.min.js) or specify a certain version [https://cdn.jsdelivr.net/npm/quantdom@1.2.2/dist/quantdom.min.js](https://cdn.jsdelivr.net/npm/quantdom@1.2.2/dist/quantdom.min.js). Visit [Quantdom's JSDelivr](https://www.jsdelivr.com/package/gh/mcqua007/quantdom?path=dist) page for esm versions.
+1. Use latest version [https://cdn.jsdelivr.net/npm/quantdom](https://cdn.jsdelivr.net/npm/quantdom/dist/quantdom.min.js) or specify a certain version [https://cdn.jsdelivr.net/npm/quantdom@1.2.2/dist/quantdom.min.js](https://cdn.jsdelivr.net/npm/quantdom@1.2.2/dist/quantdom.min.js). Visit [Quantdom's JSDelivr](https://www.jsdelivr.com/package/npm/quantdom?path=dist) page for esm versions.
 
     ```
     <script src="https://cdn.jsdelivr.net/npm/quantdom"></script>
