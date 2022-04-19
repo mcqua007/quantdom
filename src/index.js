@@ -73,7 +73,7 @@ Quantdom.prototype.findEls = function (selector) {
  * @returns {HTMLElement} an element in the array of elements you want to use
  */
 Quantdom.prototype.el = function (index = 0) {
-  return Array.from(this.els).at(index)
+  return this.els[index]
 }
 
 /**
