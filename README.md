@@ -28,9 +28,9 @@ $('.modal').show().addClass('active-overlay');
 
 2. Then start using ex.
 
-``` javascript
-$('.drop-down').attr('aria-expanded', 'true');
-```
+    ``` javascript
+    $('.drop-down').attr('aria-expanded', 'true');
+    ```
 
 ### Try it Out!
 - Fork the below playground by clicking th New Bin button and start editing!
