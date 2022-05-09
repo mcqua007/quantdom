@@ -19,9 +19,8 @@ class Quantdom {
 // ===========================================================
 
 /**
- * @description Run a function on each iteration on the list of elements.
- * Don't remove as other methods depend on this for iteration.
- * @param {function} handler A function to run on each iteration of the loop
+ * @description executes a function on each iteration on the list of elements.
+ * @param {function} handler A function to run on each iteration
  */
 Quantdom.prototype.each = function (handler) {
   this.els.forEach(handler)
@@ -29,15 +28,15 @@ Quantdom.prototype.each = function (handler) {
 }
 
 /**
- * @description returns Quantdom instance with parent of the first element that matches the selector
- * @returns {Quantdom} returns parent of first element that matches the selector
+ * @description returns the parent of the first element that matches the selector
+ * @returns {Quantdom} Returns parent of first element that matches the selector
  */
 Quantdom.prototype.parent = function () {
   return new Quantdom(this.els[0].parentNode)
 }
 
 /**
- * @description returns Quantdom instance with first element that matches the selector in children of the selected node
+ * @description returns the first element that matches the selector in children of the selected node
  * @param {string} [selector] query selector to search for
  * @returns {Quantdom} returns first element that matches the selector
  */
@@ -64,7 +63,7 @@ Quantdom.prototype.findEls = function (selector) {
 }
 
 /**
- * @description returns first element in an array of elements with same selector
+ * @description returns first element in an array of elements with same selector, acts like document.querySelector
  * @param {integer} [index] index of element to return
  * @returns {HTMLElement} an element in the array of elements you want to use
  */
@@ -82,14 +81,14 @@ Quantdom.prototype.lastEl = function () {
 
 /**
  * @description returns all matching elements, alias for querySelectorAll
- * @returns {Nodelist} an a nodelists
+ * @returns {Nodelist} a nodelists
  */
 Quantdom.prototype.els = function () {
   return this.els
 }
 
 /**
- * @description add an event on an element(s)
+ * @description adds an event on an element(s)
  * @param {string} event type of event to add to element
  * @param {function} listener event listener function to execute on event
  */
@@ -100,7 +99,7 @@ Quantdom.prototype.on = function (event, listener) {
 }
 
 /**
- * @description remove an event on an element(s)
+ * @description removes an event on an element(s)
  * @param {string} event type of event to add to element
  * @param {function} listener event listener function to remove
  */
@@ -111,8 +110,8 @@ Quantdom.prototype.off = function (event, listener) {
 }
 
 /**
- * @description appends an html string to a dom element
- * @param  {string} html html string to append to dom
+ * @description Appends an html string to a dom element
+ * @param  {string} html html string to append to DOM
  */
 Quantdom.prototype.append = function (html) {
   return this.each(el => {
@@ -121,7 +120,7 @@ Quantdom.prototype.append = function (html) {
 }
 
 /**
- * @description prepend html string to dom
+ * @description prepends a html string to dom
  * @param {string} html string of html to prepend
  */
 Quantdom.prototype.prepend = function (html) {
@@ -131,7 +130,7 @@ Quantdom.prototype.prepend = function (html) {
 }
 
 /**
- * @description insert html string to dom right before element
+ * @description inserts a html string to dom right before element
  * @param {string} html string of html to prepend
  */
 Quantdom.prototype.before = function (html) {
@@ -141,7 +140,7 @@ Quantdom.prototype.before = function (html) {
 }
 
 /**
- * @description insert html string to dom right after element
+ * @description inserts a html string to dom right after element
  * @param {string} html string of html to prepend
  */
 Quantdom.prototype.after = function (html) {
@@ -151,7 +150,7 @@ Quantdom.prototype.after = function (html) {
 }
 
 /**
- * @description sets elements attribute or returns first element attribute value
+ * @description sets an elements attribute or returns first element attribute value
  * @param {string} attr an attribue
  * @param {any} value a value to set attribute
  * @return {string} value of first occurence of element attribute
@@ -196,7 +195,7 @@ Quantdom.prototype.show = function (ariaOnly) {
 }
 
 /**
- * @description inserts html/replaces html or returns html of an element
+ * @description inserts/replaces html or returns html of an element
  * @param {string} [html] html to insert into dom
  * @returns {string} html of first occurence of element
  */
@@ -210,7 +209,7 @@ Quantdom.prototype.html = function (html) {
 }
 
 /**
- * @description inserts text/replaces text or returns text of an element
+ * @description inserts/replaces text or returns text of an element
  * @param {string} [newValue] text to insert into dom
  * @returns {string} text of first occurence of element
  */
@@ -224,7 +223,7 @@ Quantdom.prototype.text = function (newValue) {
 }
 
 /**
- * @description gets a value of first html element or sets a new value of all htmlElements
+ * @description gets a value of first html element or sets a new value of all HTML Elements
  * @param {*} [newValue] a new value to set
  * @returns {*} value of first occurence of element
  */
@@ -238,7 +237,7 @@ Quantdom.prototype.val = function (newValue) {
 }
 
 /**
- * @description add class to selected element(s)
+ * @description adds a class to the selected element(s)
  * @param {string} className
  */
 Quantdom.prototype.addClass = function (className) {
@@ -248,7 +247,7 @@ Quantdom.prototype.addClass = function (className) {
 }
 
 /**
- * @description remove a class from selected element(s)
+ * @description removes a class from the selected element(s)
  * @param {string} className
  */
 Quantdom.prototype.removeClass = function (className) {
@@ -258,7 +257,7 @@ Quantdom.prototype.removeClass = function (className) {
 }
 
 /**
- * @description toggle a class on selected element(s)
+ * @description toggles a class on selected element(s)
  * @param {string} className
  */
 Quantdom.prototype.toggleClass = function (className) {
@@ -268,7 +267,7 @@ Quantdom.prototype.toggleClass = function (className) {
 }
 
 /**
- * @description set style or returns rulename
+ * @description sets a style or returnsthe style property value
  * @param {string} prop css property to get or set
  * @param {*} [value] value to set styles
  * @returns computed style of element
