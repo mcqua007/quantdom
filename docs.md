@@ -4,7 +4,6 @@
 **Kind**: global class  
 
 * [Quantdom](#Quantdom)
-    * [new Quantdom()](#new_Quantdom_new)
     * [.each(handler)](#Quantdom+each)
     * [.parent()](#Quantdom+parent) ⇒ [<code>Quantdom</code>](#Quantdom)
     * [.find([selector])](#Quantdom+find) ⇒ [<code>Quantdom</code>](#Quantdom)
@@ -29,14 +28,6 @@
     * [.removeClass(className)](#Quantdom+removeClass)
     * [.toggleClass(className)](#Quantdom+toggleClass)
     * [.css(prop, [value])](#Quantdom+css) ⇒
-
-<a name="new_Quantdom_new"></a>
-
-### new Quantdom()
-QuantDOM is a very small dom danipulation library that uses Jquery
-like syntax but is only comprised of the most use Jquery functions. Made to making
-manipulating the dom less verbose and less key strokes. I chose to base it of Jquery's
-syntax as many developers are already familar with it so it should be easy to just start using.
 
 <a name="Quantdom+each"></a>
 
