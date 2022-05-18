@@ -282,6 +282,22 @@ Quantdom.prototype.css = function (prop, value) {
 }
 
 /**
+ * Document Ready
+ * @description wrapper to run code that needs to wait for DOM to be fully loaded
+ * @param {callback} cb - a callback to run once the DOM is ready
+ */
+export function docReady(cb) {
+  if (
+    document.readyState === 'complete' ||
+    document.readyState === 'interactive'
+  ) {
+    setTimeout(cb, 1) // call on next available tick
+  } else {
+    document.addEventListener('DOMContentLoaded', cb)
+  }
+}
+
+/**
  * @description initializes Quantdom class in order to use it methods
  * @param {String | HTMLElement} selector an DOM element to manipulate
  * @returns {Quantdom}

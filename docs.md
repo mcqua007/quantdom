@@ -1,3 +1,18 @@
+## Classes
+
+<dl>
+<dt><a href="#Quantdom">Quantdom</a></dt>
+<dd></dd>
+</dl>
+
+## Functions
+
+<dl>
+<dt><a href="#docReady">docReady(cb)</a></dt>
+<dd><p>wrapper to run code that needs to wait for DOM to be fully loaded</p>
+</dd>
+</dl>
+
 <a name="Quantdom"></a>
 
 ## Quantdom
@@ -293,4 +308,15 @@ sets a style or returnsthe style property value
 | --- | --- | --- |
 | prop | <code>string</code> | css property to get or set |
 | [value] | <code>\*</code> | value to set styles |
+
+<a name="docReady"></a>
+
+## docReady(cb)
+wrapper to run code that needs to wait for DOM to be fully loaded
+
+**Kind**: global function  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| cb | <code>callback</code> | a callback to run once the DOM is ready |
 
