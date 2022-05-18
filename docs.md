@@ -1,18 +1,3 @@
-## Classes
-
-<dl>
-<dt><a href="#Quantdom">Quantdom</a></dt>
-<dd></dd>
-</dl>
-
-## Functions
-
-<dl>
-<dt><a href="#docReady">docReady(cb)</a></dt>
-<dd><p>wrapper to run code that needs to wait for DOM to be fully loaded</p>
-</dd>
-</dl>
-
 <a name="Quantdom"></a>
 
 ## Quantdom
@@ -43,6 +28,7 @@
     * [.removeClass(className)](#Quantdom+removeClass)
     * [.toggleClass(className)](#Quantdom+toggleClass)
     * [.css(prop, [value])](#Quantdom+css) ⇒
+    * [.docReady(cb)](#Quantdom+docReady)
 
 <a name="Quantdom+each"></a>
 
@@ -299,7 +285,7 @@ toggles a class on selected element(s)
 <a name="Quantdom+css"></a>
 
 ### quantdom.css(prop, [value]) ⇒
-sets a style or returnsthe style property value
+sets a style or returns the style property value
 
 **Kind**: instance method of [<code>Quantdom</code>](#Quantdom)  
 **Returns**: computed style of element  
@@ -309,12 +295,12 @@ sets a style or returnsthe style property value
 | prop | <code>string</code> | css property to get or set |
 | [value] | <code>\*</code> | value to set styles |
 
-<a name="docReady"></a>
+<a name="Quantdom+docReady"></a>
 
-## docReady(cb)
+### quantdom.docReady(cb)
 wrapper to run code that needs to wait for DOM to be fully loaded
 
-**Kind**: global function  
+**Kind**: instance method of [<code>Quantdom</code>](#Quantdom)  
 
 | Param | Type | Description |
 | --- | --- | --- |

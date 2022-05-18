@@ -267,7 +267,7 @@ Quantdom.prototype.toggleClass = function (className) {
 }
 
 /**
- * @description sets a style or returnsthe style property value
+ * @description sets a style or returns the style property value
  * @param {string} prop css property to get or set
  * @param {*} [value] value to set styles
  * @returns computed style of element
@@ -286,7 +286,7 @@ Quantdom.prototype.css = function (prop, value) {
  * @description wrapper to run code that needs to wait for DOM to be fully loaded
  * @param {callback} cb - a callback to run once the DOM is ready
  */
-export function docReady(cb) {
+Quantdom.prototype.docReady = function (cb) {
   if (
     document.readyState === 'complete' ||
     document.readyState === 'interactive'
