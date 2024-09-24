@@ -25,6 +25,25 @@ describe('check index.js', () => {
     expect($('#container').find('.test-span').html()).toBe('test 1')
   })
 
+  test('length', () => {
+    document.body.innerHTML =
+      '<div id="container">' +
+      '   <span class="test-span">test 1</span>' +
+      '   <span class="test-span">test 2</span>' +
+      '</div>'
+
+    expect($('#container').find('.test-span').length).toBe(2)
+    expect($('#container').find('.test--no-element').length).toBe(0)
+  })
+
+  test('exists', () => {
+    document.body.innerHTML =
+      '<div id="container"><span class="test-span">test 1</span></div>'
+
+    expect($('#container').find('.test-span').exists).toBe(true)
+    expect($('#container').find('.no-element').exists).toBe(false)
+  })
+
   test('findEl', () => {
     document.body.innerHTML =
       '<div id="container">' +
