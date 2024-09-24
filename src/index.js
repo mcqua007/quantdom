@@ -30,6 +30,14 @@ Quantdom.prototype.each = function (handler) {
 }
 
 /**
+ * @description checks if element exists by checking the elements nodelist length & is an alias for exists i.e. $('.selector').exists
+ * @returns {boolean} returns true if element exists
+ */
+Quantdom.prototype.exists = function () {
+  return this.exists
+}
+
+/**
  * @description returns the parent of the first element that matches the selector
  * @returns {Quantdom} Returns parent of first element that matches the selector
  */
