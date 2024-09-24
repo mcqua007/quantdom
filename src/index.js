@@ -11,6 +11,7 @@ class Quantdom {
     } else {
       this.els = [selector] // handles the context/this case
     }
+    this.length = this.els.length // output the length of the elements nodelist
   }
 }
 
@@ -33,6 +34,22 @@ Quantdom.prototype.each = function (handler) {
  */
 Quantdom.prototype.parent = function () {
   return new Quantdom(this.els[0].parentNode)
+}
+
+/**
+ * @description returns the siblings of the first element that matches the selector
+ * @returns {Quantdom} Returns siblings of first element that matches the selector
+ */
+Quantdom.prototype.siblings = function () {
+  return new Quantdom(this.els[0].parentNode.children)
+}
+
+/**
+ * @description returns the children of the first element that matches the selector
+ * @returns {Quantdom} Returns children of first element that matches the selector
+ */
+Quantdom.prototype.children = function () {
+  return new Quantdom(this.els[0].children)
 }
 
 /**
@@ -151,9 +168,9 @@ Quantdom.prototype.after = function (html) {
 
 /**
  * @description sets an elements attribute or returns first element attribute value
- * @param {string} attr an attribue
+ * @param {string} attr an attribute
  * @param {any} value a value to set attribute
- * @return {string} value of first occurence of element attribute
+ * @return {string} value of first occurrence of element attribute
  */
 Quantdom.prototype.attr = function (attr, value) {
   if (value !== undefined) {
@@ -197,7 +214,7 @@ Quantdom.prototype.show = function (ariaOnly) {
 /**
  * @description inserts/replaces html or returns html of an element
  * @param {string} [html] html to insert into dom
- * @returns {string} html of first occurence of element
+ * @returns {string} html of first occurrence of element
  */
 Quantdom.prototype.html = function (html) {
   if (html !== undefined) {
@@ -211,7 +228,7 @@ Quantdom.prototype.html = function (html) {
 /**
  * @description inserts/replaces text or returns text of an element
  * @param {string} [newValue] text to insert into dom
- * @returns {string} text of first occurence of element
+ * @returns {string} text of first occurrence of element
  */
 Quantdom.prototype.text = function (newValue) {
   if (newValue !== undefined) {
@@ -225,7 +242,7 @@ Quantdom.prototype.text = function (newValue) {
 /**
  * @description gets a value of first html element or sets a new value of all HTML Elements
  * @param {*} [newValue] a new value to set
- * @returns {*} value of first occurence of element
+ * @returns {*} value of first occurrence of element
  */
 Quantdom.prototype.val = function (newValue) {
   if (newValue === undefined) {
