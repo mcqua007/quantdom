@@ -12,6 +12,7 @@ class Quantdom {
       this.els = [selector] // handles the context/this case
     }
     this.length = this.els.length // output the length of the elements nodelist
+    this.exists = this.length > 0 // check if element exists
   }
 }
 
