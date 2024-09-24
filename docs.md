@@ -5,7 +5,10 @@
 
 * [Quantdom](#Quantdom)
     * [.each(handler)](#Quantdom+each)
+    * [.exists()](#Quantdom+exists) ⇒ <code>boolean</code>
     * [.parent()](#Quantdom+parent) ⇒ [<code>Quantdom</code>](#Quantdom)
+    * [.siblings()](#Quantdom+siblings) ⇒ [<code>Quantdom</code>](#Quantdom)
+    * [.children()](#Quantdom+children) ⇒ [<code>Quantdom</code>](#Quantdom)
     * [.find([selector])](#Quantdom+find) ⇒ [<code>Quantdom</code>](#Quantdom)
     * [.findEl([selector])](#Quantdom+findEl) ⇒ <code>HTMLElement</code>
     * [.findEls([selector])](#Quantdom+findEls) ⇒ <code>Nodelist</code>
@@ -41,6 +44,13 @@ executes a function on each iteration on the list of elements.
 | --- | --- | --- |
 | handler | <code>function</code> | A function to run on each iteration |
 
+<a name="Quantdom+exists"></a>
+
+### quantdom.exists() ⇒ <code>boolean</code>
+checks if element exists by checking the elements nodelist length & is an alias for exists i.e. $('.selector').exists
+
+**Kind**: instance method of [<code>Quantdom</code>](#Quantdom)  
+**Returns**: <code>boolean</code> - returns true if element exists  
 <a name="Quantdom+parent"></a>
 
 ### quantdom.parent() ⇒ [<code>Quantdom</code>](#Quantdom)
@@ -48,6 +58,20 @@ returns the parent of the first element that matches the selector
 
 **Kind**: instance method of [<code>Quantdom</code>](#Quantdom)  
 **Returns**: [<code>Quantdom</code>](#Quantdom) - Returns parent of first element that matches the selector  
+<a name="Quantdom+siblings"></a>
+
+### quantdom.siblings() ⇒ [<code>Quantdom</code>](#Quantdom)
+returns the siblings of the first element that matches the selector
+
+**Kind**: instance method of [<code>Quantdom</code>](#Quantdom)  
+**Returns**: [<code>Quantdom</code>](#Quantdom) - Returns siblings of first element that matches the selector  
+<a name="Quantdom+children"></a>
+
+### quantdom.children() ⇒ [<code>Quantdom</code>](#Quantdom)
+returns the children of the first element that matches the selector
+
+**Kind**: instance method of [<code>Quantdom</code>](#Quantdom)  
+**Returns**: [<code>Quantdom</code>](#Quantdom) - Returns children of first element that matches the selector  
 <a name="Quantdom+find"></a>
 
 ### quantdom.find([selector]) ⇒ [<code>Quantdom</code>](#Quantdom)
@@ -137,7 +161,7 @@ removes an event on an element(s)
 <a name="Quantdom+append"></a>
 
 ### quantdom.append(html)
-Appends an html string to a dom element
+Appends an html string to a dom element(s)
 
 **Kind**: instance method of [<code>Quantdom</code>](#Quantdom)  
 
@@ -148,7 +172,7 @@ Appends an html string to a dom element
 <a name="Quantdom+prepend"></a>
 
 ### quantdom.prepend(html)
-prepends a html string to dom
+prepends a html string to a dom element(s)
 
 **Kind**: instance method of [<code>Quantdom</code>](#Quantdom)  
 
@@ -159,7 +183,7 @@ prepends a html string to dom
 <a name="Quantdom+before"></a>
 
 ### quantdom.before(html)
-inserts a html string to dom right before element
+inserts a html string to dom right before element(s)
 
 **Kind**: instance method of [<code>Quantdom</code>](#Quantdom)  
 
@@ -170,7 +194,7 @@ inserts a html string to dom right before element
 <a name="Quantdom+after"></a>
 
 ### quantdom.after(html)
-inserts a html string to dom right after element
+inserts a html string to dom right after element(s)
 
 **Kind**: instance method of [<code>Quantdom</code>](#Quantdom)  
 
@@ -181,14 +205,14 @@ inserts a html string to dom right after element
 <a name="Quantdom+attr"></a>
 
 ### quantdom.attr(attr, value) ⇒ <code>string</code>
-sets an elements attribute or returns first element attribute value
+sets an element(s) attribute or returns first element attribute value
 
 **Kind**: instance method of [<code>Quantdom</code>](#Quantdom)  
-**Returns**: <code>string</code> - value of first occurence of element attribute  
+**Returns**: <code>string</code> - value of first occurrence of element attribute  
 
 | Param | Type | Description |
 | --- | --- | --- |
-| attr | <code>string</code> | an attribue |
+| attr | <code>string</code> | an attribute |
 | value | <code>any</code> | a value to set attribute |
 
 <a name="Quantdom+hide"></a>
@@ -205,7 +229,7 @@ adds display none from css inline styles
 <a name="Quantdom+show"></a>
 
 ### quantdom.show([aria])
-removes display none from css inline styles
+removes display none from and element(s) css inline styles
 
 **Kind**: instance method of [<code>Quantdom</code>](#Quantdom)  
 
@@ -216,10 +240,10 @@ removes display none from css inline styles
 <a name="Quantdom+html"></a>
 
 ### quantdom.html([html]) ⇒ <code>string</code>
-inserts/replaces html or returns html of an element
+inserts/replaces html or returns html of an element(s)
 
 **Kind**: instance method of [<code>Quantdom</code>](#Quantdom)  
-**Returns**: <code>string</code> - html of first occurence of element  
+**Returns**: <code>string</code> - html of first occurrence of element  
 
 | Param | Type | Description |
 | --- | --- | --- |
@@ -228,10 +252,10 @@ inserts/replaces html or returns html of an element
 <a name="Quantdom+text"></a>
 
 ### quantdom.text([newValue]) ⇒ <code>string</code>
-inserts/replaces text or returns text of an element
+inserts/replaces text or returns text of an element(s)
 
 **Kind**: instance method of [<code>Quantdom</code>](#Quantdom)  
-**Returns**: <code>string</code> - text of first occurence of element  
+**Returns**: <code>string</code> - text of first occurrence of element  
 
 | Param | Type | Description |
 | --- | --- | --- |
@@ -240,10 +264,10 @@ inserts/replaces text or returns text of an element
 <a name="Quantdom+val"></a>
 
 ### quantdom.val([newValue]) ⇒ <code>\*</code>
-gets a value of first html element or sets a new value of all HTML Elements
+gets a value of first html element or sets a new value of all HTML Element(s)
 
 **Kind**: instance method of [<code>Quantdom</code>](#Quantdom)  
-**Returns**: <code>\*</code> - value of first occurence of element  
+**Returns**: <code>\*</code> - value of first occurrence of element  
 
 | Param | Type | Description |
 | --- | --- | --- |
@@ -285,7 +309,7 @@ toggles a class on selected element(s)
 <a name="Quantdom+css"></a>
 
 ### quantdom.css(prop, [value]) ⇒
-sets a style or returns the style property value
+sets a style on element(s) or returns the style property value
 
 **Kind**: instance method of [<code>Quantdom</code>](#Quantdom)  
 **Returns**: computed style of element  

@@ -136,7 +136,7 @@ Quantdom.prototype.off = function (event, listener) {
 }
 
 /**
- * @description Appends an html string to a dom element
+ * @description Appends an html string to a dom element(s)
  * @param  {string} html html string to append to DOM
  */
 Quantdom.prototype.append = function (html) {
@@ -146,7 +146,7 @@ Quantdom.prototype.append = function (html) {
 }
 
 /**
- * @description prepends a html string to dom
+ * @description prepends a html string to a dom element(s)
  * @param {string} html string of html to prepend
  */
 Quantdom.prototype.prepend = function (html) {
@@ -156,7 +156,7 @@ Quantdom.prototype.prepend = function (html) {
 }
 
 /**
- * @description inserts a html string to dom right before element
+ * @description inserts a html string to dom right before element(s)
  * @param {string} html string of html to prepend
  */
 Quantdom.prototype.before = function (html) {
@@ -166,7 +166,7 @@ Quantdom.prototype.before = function (html) {
 }
 
 /**
- * @description inserts a html string to dom right after element
+ * @description inserts a html string to dom right after element(s)
  * @param {string} html string of html to prepend
  */
 Quantdom.prototype.after = function (html) {
@@ -176,7 +176,7 @@ Quantdom.prototype.after = function (html) {
 }
 
 /**
- * @description sets an elements attribute or returns first element attribute value
+ * @description sets an element(s) attribute or returns first element attribute value
  * @param {string} attr an attribute
  * @param {any} value a value to set attribute
  * @return {string} value of first occurrence of element attribute
@@ -206,7 +206,7 @@ Quantdom.prototype.hide = function (ariaOnly) {
 }
 
 /**
- * @description removes display none from css inline styles
+ * @description removes display none from and element(s) css inline styles
  * @param {boolean} [aria] if true sets ara-hidden to false instead of removing inline display style
  */
 Quantdom.prototype.show = function (ariaOnly) {
@@ -221,7 +221,7 @@ Quantdom.prototype.show = function (ariaOnly) {
 }
 
 /**
- * @description inserts/replaces html or returns html of an element
+ * @description inserts/replaces html or returns html of an element(s)
  * @param {string} [html] html to insert into dom
  * @returns {string} html of first occurrence of element
  */
@@ -235,7 +235,7 @@ Quantdom.prototype.html = function (html) {
 }
 
 /**
- * @description inserts/replaces text or returns text of an element
+ * @description inserts/replaces text or returns text of an element(s)
  * @param {string} [newValue] text to insert into dom
  * @returns {string} text of first occurrence of element
  */
@@ -249,7 +249,7 @@ Quantdom.prototype.text = function (newValue) {
 }
 
 /**
- * @description gets a value of first html element or sets a new value of all HTML Elements
+ * @description gets a value of first html element or sets a new value of all HTML Element(s)
  * @param {*} [newValue] a new value to set
  * @returns {*} value of first occurrence of element
  */
@@ -293,7 +293,7 @@ Quantdom.prototype.toggleClass = function (className) {
 }
 
 /**
- * @description sets a style or returns the style property value
+ * @description sets a style on element(s) or returns the style property value
  * @param {string} prop css property to get or set
  * @param {*} [value] value to set styles
  * @returns computed style of element
