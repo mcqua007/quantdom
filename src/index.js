@@ -11,6 +11,8 @@ class Quantdom {
     } else {
       this.els = [selector] // handles the context/this case
     }
+    this.length = this.els.length // output the length of the elements nodelist
+    this.exists = this.length > 0 // check if element exists
   }
 }
 
@@ -28,11 +30,35 @@ Quantdom.prototype.each = function (handler) {
 }
 
 /**
+ * @description checks if element exists by checking the elements nodelist length & is an alias for exists i.e. $('.selector').exists
+ * @returns {boolean} returns true if element exists
+ */
+Quantdom.prototype.exists = function () {
+  return this.exists
+}
+
+/**
  * @description returns the parent of the first element that matches the selector
  * @returns {Quantdom} Returns parent of first element that matches the selector
  */
 Quantdom.prototype.parent = function () {
   return new Quantdom(this.els[0].parentNode)
+}
+
+/**
+ * @description returns the siblings of the first element that matches the selector
+ * @returns {Quantdom} Returns siblings of first element that matches the selector
+ */
+Quantdom.prototype.siblings = function () {
+  return new Quantdom(this.els[0].parentNode.children)
+}
+
+/**
+ * @description returns the children of the first element that matches the selector
+ * @returns {Quantdom} Returns children of first element that matches the selector
+ */
+Quantdom.prototype.children = function () {
+  return new Quantdom(this.els[0].children)
 }
 
 /**
@@ -110,7 +136,7 @@ Quantdom.prototype.off = function (event, listener) {
 }
 
 /**
- * @description Appends an html string to a dom element
+ * @description Appends an html string to a dom element(s)
  * @param  {string} html html string to append to DOM
  */
 Quantdom.prototype.append = function (html) {
@@ -120,7 +146,7 @@ Quantdom.prototype.append = function (html) {
 }
 
 /**
- * @description prepends a html string to dom
+ * @description prepends a html string to a dom element(s)
  * @param {string} html string of html to prepend
  */
 Quantdom.prototype.prepend = function (html) {
@@ -130,7 +156,7 @@ Quantdom.prototype.prepend = function (html) {
 }
 
 /**
- * @description inserts a html string to dom right before element
+ * @description inserts a html string to dom right before element(s)
  * @param {string} html string of html to prepend
  */
 Quantdom.prototype.before = function (html) {
@@ -140,7 +166,7 @@ Quantdom.prototype.before = function (html) {
 }
 
 /**
- * @description inserts a html string to dom right after element
+ * @description inserts a html string to dom right after element(s)
  * @param {string} html string of html to prepend
  */
 Quantdom.prototype.after = function (html) {
@@ -150,10 +176,10 @@ Quantdom.prototype.after = function (html) {
 }
 
 /**
- * @description sets an elements attribute or returns first element attribute value
- * @param {string} attr an attribue
+ * @description sets an element(s) attribute or returns first element attribute value
+ * @param {string} attr an attribute
  * @param {any} value a value to set attribute
- * @return {string} value of first occurence of element attribute
+ * @return {string} value of first occurrence of element attribute
  */
 Quantdom.prototype.attr = function (attr, value) {
   if (value !== undefined) {
@@ -180,7 +206,7 @@ Quantdom.prototype.hide = function (ariaOnly) {
 }
 
 /**
- * @description removes display none from css inline styles
+ * @description removes display none from and element(s) css inline styles
  * @param {boolean} [aria] if true sets ara-hidden to false instead of removing inline display style
  */
 Quantdom.prototype.show = function (ariaOnly) {
@@ -195,9 +221,9 @@ Quantdom.prototype.show = function (ariaOnly) {
 }
 
 /**
- * @description inserts/replaces html or returns html of an element
+ * @description inserts/replaces html or returns html of an element(s)
  * @param {string} [html] html to insert into dom
- * @returns {string} html of first occurence of element
+ * @returns {string} html of first occurrence of element
  */
 Quantdom.prototype.html = function (html) {
   if (html !== undefined) {
@@ -209,9 +235,9 @@ Quantdom.prototype.html = function (html) {
 }
 
 /**
- * @description inserts/replaces text or returns text of an element
+ * @description inserts/replaces text or returns text of an element(s)
  * @param {string} [newValue] text to insert into dom
- * @returns {string} text of first occurence of element
+ * @returns {string} text of first occurrence of element
  */
 Quantdom.prototype.text = function (newValue) {
   if (newValue !== undefined) {
@@ -223,9 +249,9 @@ Quantdom.prototype.text = function (newValue) {
 }
 
 /**
- * @description gets a value of first html element or sets a new value of all HTML Elements
+ * @description gets a value of first html element or sets a new value of all HTML Element(s)
  * @param {*} [newValue] a new value to set
- * @returns {*} value of first occurence of element
+ * @returns {*} value of first occurrence of element
  */
 Quantdom.prototype.val = function (newValue) {
   if (newValue === undefined) {
@@ -267,7 +293,7 @@ Quantdom.prototype.toggleClass = function (className) {
 }
 
 /**
- * @description sets a style or returns the style property value
+ * @description sets a style on element(s) or returns the style property value
  * @param {string} prop css property to get or set
  * @param {*} [value] value to set styles
  * @returns computed style of element
