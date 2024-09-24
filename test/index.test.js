@@ -3,16 +3,15 @@
  */
 
 /* global describe, test, expect */
-
 import $ from '../dist/quantdom.min'
 
 describe('check index.js', () => {
   test('parent', () => {
     document.body.innerHTML =
-      '<div id="container">' + '   <span id="password">test</span>' + '</div>'
+      '<div id="container"><span id="password">test</span></div>'
 
     expect($('#password').parent().parent().html()).toBe(
-      '<div id="container">' + '   <span id="password">test</span>' + '</div>'
+      '<div id="container"><span id="password">test</span></div>'
     )
   })
 
@@ -52,7 +51,7 @@ describe('check index.js', () => {
 
   test('el', () => {
     document.body.innerHTML =
-      '<div id="container">' + '   <span id="password">test</span>' + '</div>'
+      '<div id="container"><span id="password">test</span></div>'
 
     expect($('#password').el()).toBe(document.getElementById('password'))
   })
@@ -80,7 +79,7 @@ describe('check index.js', () => {
   test('on and off', () => {
     // Set up our document body
     document.body.innerHTML =
-      '<div id="container">' + '   <button id="button" />' + '</div>'
+      '<div id="container"><button id="button" >Submit</button></div>'
 
     const mockCallBack = jest.fn()
 
@@ -116,13 +115,13 @@ describe('check index.js', () => {
 
   test('before and after', () => {
     document.body.innerHTML =
-      '<div id="container">' + '   <span id="username">abc</span>' + '</div>'
+      '<div id="container"><span id="username">abc</span></div>'
 
     $('#username').after('<span>test</span>')
     $('#username').before('<span>test</span>')
 
     expect($('#container').html()).toBe(
-      '   <span>test</span><span id="username">abc</span><span>test</span>'
+      '<span>test</span><span id="username">abc</span><span>test</span>'
     )
   })
 
